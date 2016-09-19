@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Hello VUErld</title>
+  </head>
+  <body>
+
+    <header class="header" role="banner">
+      <h1 class="header__title">{{ title }}</h1>
+    </header>
+
+    <main role="main" class="content">
+
+      <form action="#" role="form">
+        <label for="new-title">Add a title</label>
+        <input id="new-title" type="text" v-model="newArticle" v-on:keyup.enter="addPost" placeholder="Does the best library website eliminate choice?">
+      </form>
+
+      <h2>Articles</h2>
+      <article role="article" v-for="article in articles">
+        <h3>{{ article.title }}</h3>
+      </article>
+
+      <aside class="sidebar">
+
+      </aside>
+    </main>
+
+    <script src="bower_components/vue/dist/vue.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
